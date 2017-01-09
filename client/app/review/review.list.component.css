@@ -1,0 +1,15 @@
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 12.5px;
+    border-left: 5px solid #eee;
+}
+
+.inline {
+    display: inline-block;
+    margin: 10px;
+}
+
+.writePostBtnDiv {
+    margin-bottom: 20px;
+}

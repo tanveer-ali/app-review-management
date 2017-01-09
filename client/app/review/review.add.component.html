@@ -1,0 +1,28 @@
+
+<h3> Product Review</h3>
+
+
+<div class="alert alert-danger" *ngIf="message ">
+    <strong>Error!</strong> {{message}}
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-left">
+            <span> Name 
+                <input type='text' id='name' [(ngModel)]='newReview.name' class='form-control' placeholder='Name'> </span>
+
+
+            <span>Comments 
+                <textarea class="form-control" [(ngModel)]='newReview.review' rows="5" id="comment" placeholder='Describe your experience'></textarea>
+                    </span>
+        </div>
+    </div>
+</div>
+<br>
+<div class="col-md-12">
+    <div class="text-center">
+        <a id="back" [routerLink]="['/']" class="btn btn-default btn-closeMW">Back to List </a>
+        <a id="save" class="btn btn-primary" (click)='addNewReview()'>Save </a>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+
+
+<ul class="pagination"   >
+  
+  <li><a  href="javascript:void(0)" *ngFor="let pageNo of pageList" [ngClass]="{'active':pageNo==currentPage}"  (click)='onChangePageClick(pageNo)' >{{pageNo}}</a></li>
+ 
+</ul>
+

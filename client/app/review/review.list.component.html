@@ -1,0 +1,59 @@
+<div class="alert alert-danger " *ngIf="message ">
+    <strong>Issue: </strong> {{message}}
+</div>
+
+
+<div class="panel-header ">
+
+<div class="form-inline">
+    <div class="form-group">
+        <label>Sort By:</label>
+
+        <select class='form-control ' data-val='true ' [(ngModel)]='sortByField' (change)="onSortChange() " name='SortBy '>
+												<option value='New'>Oldest Review</option>
+												<option value='Old'>Latest Review</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary" [routerLink]="['/new']" routerLinkActive=" active ">Write Review </button>
+
+</div>
+
+
+</div>
+<div class=" panel-body ">
+    <div class="row ">
+        <div class="col-md-12 ">
+            <table class="table table-condensed table-striped ">
+                <thead>
+                    <tr>
+                        <th>Reviews</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let review of reviews | sortingPipe:sortByField | paging:currentPage:5 ">
+                        <td>
+                            <div class=" ">
+                                <div class='inline '>
+                                    <b> {{review.name }} </b><br>
+                                </div>
+                                <div class=" ">
+                                    <p>{{review.review}} </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+<div class=" panel-footer ">
+    <div class="pull-center ">
+        <pagination [data]='reviews ' [totalDisplay]='5 ' (pageChange)='changePage($event)' [currentexPage]=currentPage></pagination>
+    </div>
+</div>
