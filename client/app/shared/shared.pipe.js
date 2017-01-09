@@ -35,10 +35,10 @@ var SortingPipe = (function () {
     SortingPipe.prototype.transform = function (value, sortBy) {
         if (value == undefined)
             return value;
-        if (sortBy == "New") {
+        if (sortBy == "Oldest") {
             value = this.sortByID(value, true);
         }
-        else if (sortBy == "Old") {
+        else if (sortBy == "Latest") {
             value = this.sortByID(value, false);
         }
         return value;

@@ -19,8 +19,7 @@ var AppRoutingModule = (function () {
         core_1.NgModule({
             imports: [router_1.RouterModule.forRoot([
                     { path: '', component: review_list_component_1.ReviewsListComponent, pathMatch: 'full' },
-                    { path: 'new', component: review_add_component_1.ReviewAddComponent },
-                    { path: 'home', component: review_list_component_1.ReviewsListComponent }
+                    { path: 'new', component: review_add_component_1.ReviewAddComponent }
                 ])],
             exports: [router_1.RouterModule]
         }), 

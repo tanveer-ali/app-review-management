@@ -16,7 +16,7 @@ var ReviewsListComponent = (function () {
         this.router = router;
         this.paging = [];
         this.currentPage = 1;
-        this.sortByField = "New";
+        this.sortByField = "Latest";
         this._reviewService = reviewService;
         this._router = router;
     }

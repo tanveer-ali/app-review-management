@@ -27,10 +27,10 @@ export class SortingPipe implements PipeTransform {
 transform(value: any[], sortBy: string): any {
         if (value == undefined) return value;
 
-        if (sortBy == "New") {
+        if (sortBy == "Oldest") {
              value= this.sortByID(value, true);
         }
-        else if (sortBy == "Old") {
+        else if (sortBy == "Latest") {
             value= this.sortByID(value, false);
         }
         return value;

@@ -26,17 +26,12 @@ export class ReviewAddComponent {
 
         this._reviewService.addReview(review)
             .subscribe(
-            c => this.returnReview = c,
-            function (err) { console.log('Error: %s', err); },
-            this.onCompletion);         
+            c => {
+                alert("Review Added!");
+                this._router.navigate(['/']);
+            },
+            error =>  console.log('Error: %s', error));
         
-    }
-
-    private onCompletion(): void {
-
-       alert("Review Added!");
-       this.newReview = new ReviewModel();       
-       //this._router.navigate(['/home']);
     }
 
 

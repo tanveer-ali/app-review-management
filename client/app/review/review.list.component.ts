@@ -17,7 +17,7 @@ export class ReviewsListComponent implements OnInit, OnChanges {
 
     paging: number[] = [];
     currentPage: number = 1;
-    sortByField="New";
+    sortByField="Latest";
 
     private _reviewService:ReviewService;
     private _router:Router;

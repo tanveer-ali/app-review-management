@@ -7,8 +7,7 @@ import { ReviewAddComponent} from './review/review.add.component'
 @NgModule({
     imports: [RouterModule.forRoot([
                                     {path: '', component:ReviewsListComponent, pathMatch: 'full' },
-                                    {path: 'new',  component: ReviewAddComponent },
-                                    {path: 'home',  component: ReviewsListComponent }
+                                    {path: 'new',  component: ReviewAddComponent }
                                     ])],
     exports: [RouterModule]
 })

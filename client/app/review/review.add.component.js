@@ -27,12 +27,10 @@ var ReviewAddComponent = (function () {
         if (!review.review)
             return;
         this._reviewService.addReview(review)
-            .subscribe(function (c) { return _this.returnReview = c; }, function (err) { console.log('Error: %s', err); }, this.onCompletion);
-    };
-    ReviewAddComponent.prototype.onCompletion = function () {
-        alert("Review Added!");
-        this.newReview = new reviewModel_1.ReviewModel();
-        //this._router.navigate(['/home']);
+            .subscribe(function (c) {
+            alert("Review Added!");
+            _this._router.navigate(['/']);
+        }, function (error) { return console.log('Error: %s', error); });
     };
     ReviewAddComponent.prototype.addNewReview = function () {
         this.message = '';

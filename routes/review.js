@@ -28,11 +28,11 @@ function saveReview(review, res) {
             //assign the result.seq to review and save
             review._id = result.seq;
 
-            db.reviews.save(review, function (err, review) {
+            db.reviews.save(review, function (err, result) {
                 if (err) {
                     res.send(err)
                 }
-                res.json(review);
+                res.json(result);
             });
         }
     );
@@ -49,7 +49,7 @@ router.post('/review', function (req, res, next) {
         res.json({ "error": "Bad Data" });
     } else {
         
-        saveReview(review, res);
+        saveReview(review, res);        
     }
 });
 
